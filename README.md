@@ -17,11 +17,11 @@
 https://github.com/hacoidev/ophim-core
 
 ## Install
-1. Tại thư mục của Project: `composer require ophimcms/ophim-theme-motchill`
+1. Tại thư mục của Project: `composer require ophimcms/theme-motchill`
 2. Kích hoạt giao diện trong Admin Panel
 
 ## Update
-1. Tại thư mục của Project: `composer update ophimcms/ophim-theme-motchill`
+1. Tại thư mục của Project: `composer update ophimcms/theme-motchill`
 2. Re-Activate giao diện trong Admin Panel
 
 ## Document
