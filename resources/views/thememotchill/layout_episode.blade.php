@@ -45,7 +45,7 @@
     <link rel="stylesheet" type="text/css" href="/themes/motchill/css/default.css?v=0.3.9" />
     <link rel="stylesheet" type="text/css" href="/themes/motchill/css/styles.css?v=1.1.9" />
     <link rel="stylesheet" type="text/css" href="/themes/motchill/css/responsive.css?v=1.0.5" />
-    @if(!(new \Jenssegers\Agent\Agent())->isDesktop())
+    @if (!(new \Jenssegers\Agent\Agent())->isDesktop())
         <link rel="stylesheet" type="text/css" href="/themes/motchill/css/ipad.css?v=1.0.5" />
     @endif
     <link rel="stylesheet" type="text/css" href="/themes/motchill/css/custom.css" />
@@ -61,7 +61,7 @@
 
 @section('body')
     <div id="page">
-        @if((new \Jenssegers\Agent\Agent())->isDesktop())
+        @if ((new \Jenssegers\Agent\Agent())->isDesktop())
             @include('themes::thememotchill.inc.header')
         @else
             @include('themes::thememotchill.inc.header_mobile')
@@ -76,11 +76,6 @@
                     <div class="clear"></div>
                     @yield('breadcrumb')
                     @yield('content')
-                    <div class="right-content">
-                        @foreach ($tops as $top)
-                            @include('themes::thememotchill.inc.sidebar.' . $top['template'])
-                        @endforeach
-                    </div>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -104,18 +99,49 @@
         {!! get_theme_option('ads_catfish') !!}
     @endif
     <script src="/themes/motchill/js/jquery.raty.js"></script>
+    <script type="text/javascript" src="/themes/motchill/js/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.top-star').raty({
-                readOnly: true,
-                numberMax: 5,
-                half: true,
-                score: function() {
-                    return $(this).attr('data-rating');
-                },
-                hints: ["bad", "poor", "regular", "good", "gorgeous"],
-                space: false
+            $("#film_related").owlCarousel({
+                items: 5,
+                itemsTablet: [700, 3],
+                itemsMobile: [479, 2],
+                navigation: true, // Show next and prev buttons
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                stopOnHover: true,
+                pagination: false,
+                navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
             });
+
+            @if(!(new \Jenssegers\Agent\Agent())->isDesktop())
+                //Tính lại chiều cao cho các ảnh bị lệch nhau trên mobile
+                var first_img_w = $(".img-film").eq(0).width();
+                var first_img_h = first_img_w * (1.25); // Chiều cao bằng chiều rộng x 1.42
+                $(".img-film").height(first_img_h);
+
+                $(function() {
+                    $('.dinfo').slimScroll({
+                        height: '250px'
+                    });
+                });
+            @endif
+
+            //Loading video
+            $("#btn_lightbulb").click(function() {
+                var $this = $(this);
+                var $overlay = '<div id="background_lamp"></div>';
+                if ($this.hasClass('off')) {
+                    $this.removeClass('off');
+                    $this.attr('title', 'Tắt đèn');
+                    $("#background_lamp").remove();
+                } else {
+                    $this.addClass('off');
+                    $this.attr('title', 'Bật đèn');
+                    $('body').append($overlay);
+                }
+            });
+
         })
     </script>
 

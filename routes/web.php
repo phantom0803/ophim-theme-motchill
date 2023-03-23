@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Ophim\ThemeLengend\Controllers\ThemeMotchillController;
+use Ophim\ThemeMotchill\Controllers\ThemeMotchillController;
 
 // --------------------------
 // Custom Backpack Routes
