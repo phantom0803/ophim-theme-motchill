@@ -1,0 +1,145 @@
+body,
+html {
+    min-width: 0;
+}
+@media (min-width: 980px) and (max-width: 1440px) {
+    #header .logo {
+        display: block;
+        text-align: center;
+    }
+    #header .logo img {
+        width: 120px;
+    }
+}
+.container {
+    padding: 0 8px;
+    width: auto;
+}
+.download-box .ads,
+.btn-contact {
+    display: none;
+}
+.vjs-live-controls {
+    display: none;
+}
+.vjs-default-skin .vjs-play-control {
+    width: 3em;
+}
+#header {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+#form_search,
+#mform_search {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    z-index: 12;
+    color: #ffffff;
+    border: 1px solid #353535;
+    border-radius: 4px;
+    padding: 5px;
+    font-style: italic;
+    width: 100%;
+    background: #202020 linear-gradient(#666, #333);
+    background: #202020 -webkit-linear-gradient(#666, #333);
+    background: #202020 -o-linear-gradient(#666, #333);
+    background: #202020 -moz-linear-gradient(#666, #333);
+    outline: none;
+    transition: all 0.3s ease;
+    display: none;
+}
+#form_search.expanded,
+#mform_search.expanded {
+    display: block;
+}
+#mkeyword {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 93%;
+}
+.expanded #msuggestions {
+    position: static;
+    margin: 0;
+}
+#msuggestions ul.autocomplete-list {
+    width: 99%;
+    padding: 0;
+}
+#form_search .fa-arrow-circle-right {
+    font-size: 18px;
+    font-size: 20px;
+    float: right;
+    margin: 1px 0 0 0;
+    position: absolute;
+}
+.title-box {
+    padding-left: 8px;
+}
+.list-films .label-quality {
+    bottom: 60px;
+}
+.main-menu ul.container {
+    padding: 0;
+}
+.main-menu.fix-nav,
+.main-menu {
+    position: fixed;
+    width: 240px;
+    left: -240px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    z-index: 11;
+    transition: 0.3s all;
+}
+.main-menu.expanded {
+    left: 0;
+}
+.main-menu .menu-item {
+    display: block;
+    float: none;
+    width: 100%;
+}
+.main-menu .menu-item:hover .sub-menu {
+    display: none;
+}
+.main-menu .menu-item .sub-menu.expanded {
+    display: block;
+    position: inherit;
+}
+.main-menu .menu-item > a:after {
+    content: "+";
+    float: right;
+    font-size: 20px;
+    line-height: 13px;
+    color: #fff;
+    margin: 2px 5px 0 0;
+}
+.main-menu .menu-item:first-child a:after {
+}
+.main-menu .menu-item > a.active:after {
+    content: "-";
+    font-size: 25px;
+}
+.main-menu .menu-item .sub-menu {
+    width: 100% !important;
+}
+.main-menu .menu-item .sub-menu.span-2 .sub-menu-item,
+.main-menu .menu-item .sub-menu.span-3 .sub-menu-item {
+    float: none;
+    width: auto;
+}
+.sub-menu .sub-menu-item a {
+    padding-left: 20px;
+}
+.main-menu .menu-item.active > a {
+    background: none;
+}
+.left-content-player .episodes {
+    margin-top: 20px;
+}

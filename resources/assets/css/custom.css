@@ -1,0 +1,121 @@
+body,
+html {
+    background-color: #02080f;
+}
+#header {
+    background: #333333;
+}
+.main-menu {
+    background: #2d2d2d;
+}
+.main-menu .menu-item.active > a,
+.main-menu .menu-item a:hover {
+    color: #c58560;
+}
+.title-box .tophot,
+.right-content .block .caption {
+    color: #da966e;
+}
+.main-menu .menu-item .sub-menu {
+    background-color: #2d2d2d;
+}
+.list-films .item .icon-play,
+.list-films .label-quality {
+    background: #522e75;
+}
+.list-films .label-quality:after {
+    border-left: 10px solid #522e75;
+}
+#film_hot .item .label,
+#film_related .item .label,
+.film-new .item .label {
+    background: #a3765d;
+    border-bottom: 2px solid #96674f;
+}
+.list-films.film-new .item .name {
+    background: #181818;
+}
+.list-film li:nth-child(even) {
+    background: rgb(24 24 24);
+}
+.title-box .tab.active,
+.title-box .tab:hover {
+    color: #da966e;
+    border-bottom: 2px solid #907863;
+}
+.most-view .list-film .item .number-rank {
+    background: #c58560;
+}
+.breadcrumbs {
+    background: #181818;
+}
+#page-info .blockbody .title {
+    color: #ff9658;
+}
+.btn-download-link {
+}
+.btn-stream-link {
+}
+.dinfo .film-status {
+}
+#page-info .latest-episode > a:hover,
+.list-episode > a:hover,
+.list-episode > a.current,
+ul.server-backup li span.active,
+ul.server-backup li span:hover {
+    background: #c58560;
+}
+
+#player-video .details .name h1 a,
+#player-video .details .name span {
+    color: #da966e;
+}
+.film-note {
+    border: 1px solid #e8a568;
+    background: #181818;
+}
+#player-video .bottom-content {
+    background: #181818;
+}
+.mp-tips {
+    color: #fff;
+}
+#suggestions ul.autocomplete-list li span,
+#suggestions ul.autocomplete-list li strong,
+#suggestions ul.autocomplete-list li.last a {
+    color: #da966e;
+}
+.most-view .list-film .item a:hover,
+.list-film .film-item-ver .name a:hover {
+    color: #da966e;
+}
+.most-view .tabs .tab:hover {
+    background: #333;
+}
+#footer {
+    color: #848484;
+    background: #2d2d2d;
+}
+#footer .info {
+    background: #353535;
+}
+
+
+@media (min-width: 250px) and (max-width: 979px) {
+    #header .logo {
+        display: block;
+        text-align: center;
+    }
+    #header .logo img {
+        width: 120px;
+        height: 30px !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.server-episode-block {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #da843d;
+}
