@@ -79,9 +79,10 @@
                 var first_img_h = first_img_w * (1.42);
                 $("#film_hot .img-film").height(first_img_h);
 
-                first_img_w = $(".film-moi .img-film").eq(0).width();
-                first_img_h = first_img_w * (1.42);
-                $(".film-moi .img-film").height(first_img_h);
+                // first_img_w = $(".film-moi .img-film").eq(0).width();
+                // first_img_h = first_img_w * (1.42);
+                // $(".film-moi .img-film").height(first_img_h);
+                $(".film-moi .img-film").height(252);
             @endif
         });
     </script>

@@ -6,7 +6,7 @@
         @foreach ($top['data'] as $key => $movie)
             <li class="film-item-ver">
                 <a href="{{$movie->getUrl()}}" title="{{$movie->name}}">
-                    <img class="avatar" title="{{$movie->name}}" alt="{{$movie->name}}" src="{{$movie->thumb_url}}" />
+                    <img class="avatar" title="{{$movie->name}}" alt="{{$movie->name}}" src="{{$movie->getThumbUrl()}}" />
                 </a>
                 <div class="title">
                     <p class="name">
@@ -14,7 +14,7 @@
                     </p>
                     <p class="real-name">{{$movie->publish_year}}</p>
                 </div>
-                <p class="top-star" data-rating="{{(number_format($movie->rating_star, 1))*10}}"></p>
+                <p class="top-star" data-rating="{{($movie->getRatingStar())*10}}"></p>
             </li>
         @endforeach
     </ul>

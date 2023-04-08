@@ -8,7 +8,7 @@
                 <li class="item" title="{{$movie->name}}">
                     <span class="label">{{$movie->episode_current}} {{$movie->language}}</span>
                     <a href="{{$movie->getUrl()}}" title="{{$movie->name}}">
-                        <img class="img-film" title="{{$movie->name}}" alt="{{$movie->name}}" src="{{$movie->thumb_url}}" />
+                        <img class="img-film" title="{{$movie->name}}" alt="{{$movie->name}}" src="{{$movie->getThumbUrl()}}" />
                         <i class="icon-play"></i>
                     </a>
                     <div class="text absolute">

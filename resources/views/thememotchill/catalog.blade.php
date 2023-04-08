@@ -52,9 +52,10 @@
     @if(!(new \Jenssegers\Agent\Agent())->isDesktop())
         <script>
             $(document).ready(function() {
-                first_img_w = $(".list-films .img-film").eq(0).width();
-                first_img_h = first_img_w * (1.42);
-                $(".list-films .img-film").height(first_img_h);
+                // first_img_w = $(".list-films .img-film").eq(0).width();
+                // first_img_h = first_img_w * (1.42);
+                // $(".list-films .img-film").height(first_img_h);
+                $(".list-films .img-film").height(252);
             });
         </script>
     @endif

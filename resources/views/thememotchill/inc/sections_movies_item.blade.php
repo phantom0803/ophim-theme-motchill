@@ -2,7 +2,7 @@
     <span class="label">{{$movie->episode_current}} {{$movie->language}}</span>
     <a href="{{$movie->getUrl()}}" title="{{$movie->name}}">
         <img class="img-film lazy"
-            data-original="{{$movie->thumb_url}}"
+            data-original="{{$movie->getThumbUrl()}}"
             title="{{$movie->name}}"
             alt="{{$movie->name}}" />
         <i class="icon-play"></i>

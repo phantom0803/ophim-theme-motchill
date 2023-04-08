@@ -100,14 +100,14 @@
             </div>
             <div class="box-rating" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
                 <div id="star"
-                    data-score="{{ number_format($currentMovie->rating_star == 0 ? 8 : $currentMovie->rating_star, 1) }}"
+                    data-score="{{$currentMovie->getRatingStar()}}"
                     style="cursor: pointer;"></div>
                 <div>
                     <div id="div_average" style="float: left; line-height: 16px; margin: 0 5px; ">
                         <span id="hint"></span> ( <span class="average" id="average"
-                            itemprop="ratingValue">{{ number_format($currentMovie->rating_star > 0 ? $currentMovie->rating_star : 8, 1) }}</span>
+                            itemprop="ratingValue">{{$currentMovie->getRatingStar()}}</span>
                         điểm / <span id="rate_count"
-                            itemprop="ratingCount">{{ $currentMovie->rating_count > 0 ? $currentMovie->rating_count : 1 }}</span>
+                            itemprop="ratingCount">{{$currentMovie->getRatingCount()}}</span>
                         lượt)
                     </div>
                     <meta itemprop="bestRating" content="10" />
@@ -121,7 +121,7 @@
     <div class="bottom-content">
         <div class="container">
             <div id="comment-tab">
-                <div class="box-comment" id="tabs-facebook">
+                <div class="box-comment" id="tabs-facebook" style="width: 100%; background-color: #fff">
                     <div id="mp-comments" class="fb-comments" data-href="{{ $currentMovie->getUrl() }}"
                         data-numposts="10" data-order-by="reverse_time" data-colorscheme="light"></div>
                     <script>
@@ -141,7 +141,7 @@
                             <span class="label">{{ $movie->episode_current }} {{ $movie->language }}</span>
                             <a href="{{ $movie->getUrl() }}" title="{{ $movie->name }}">
                                 <img class="img-film" title="{{ $movie->name }}" alt="{{ $movie->name }}"
-                                    src="{{ $movie->thumb_url }}" />
+                                    src="{{ $movie->getThumbUrl() }}" />
                                 <i class="icon-play"></i>
                             </a>
                             <div class="text absolute">
@@ -257,7 +257,7 @@
                     key: "{{ Setting::get('jwplayer_license') }}",
                     aspectratio: "16:9",
                     width: "100%",
-                    image: "{{ $currentMovie->poster_url ?: $currentMovie->thumb_url }}",
+                    image: "{{ $currentMovie->getPosterUrl() }}",
                     file: link,
                     playbackRateControls: true,
                     playbackRates: [0.25, 0.75, 1, 1.25],
